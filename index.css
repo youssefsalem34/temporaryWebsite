@@ -378,7 +378,7 @@ body:not(.user-is-tabbing) a:focus {
   
   .nav {
     /* position: sticky; */
-    top: 0; /* Sticks the nav bar to the top */
+    /* top: 0; Sticks the nav bar to the top */
     background-color: #fff;
     padding: 10px 0;
     z-index: 1000; /* Ensures the nav stays on top of other content */
