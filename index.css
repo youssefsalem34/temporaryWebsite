@@ -374,6 +374,8 @@ body:not(.user-is-tabbing) a:focus {
     z-index: 1000;
     position: fixed;
     top: 0;
+    width: 100%; /* Ensure the header spans the full width */
+    box-shadow: 0 4px 2px -2px gray; 
   }
   
   .nav {
