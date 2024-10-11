@@ -374,6 +374,7 @@ body:not(.user-is-tabbing) a:focus {
     position: fixed;
     top: 0;
     width: 100%;
+    background-color: rgba(240, 0, 0, 0.8);
     z-index: 1000;
 }
 
