@@ -367,19 +367,13 @@ body:not(.user-is-tabbing) a:focus {
 /* ----- Navigation ----- */
 /* --------------------------------------- */
 
-:root {
-    --gutter-normal: 1rem; /* Example value */
-    --gutter-medium: 0.5rem; /* Example value */
-}
-
 .nav {
     display: flex;
     justify-content: flex-end;
     padding: var(--gutter-normal) 0;
     position: fixed;
     top: 0;
-    width: 100%;
-  
+    
     /* z-index: 1000; */
 }
 
@@ -389,7 +383,7 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 .nav__item:not(:last-child) {
-    margin-right: var(--gutter-medium); /* Ensure this variable is defined */
+    margin-right: var(--gutter-medium);
 }
 
 @media(max-width: 500px) {
