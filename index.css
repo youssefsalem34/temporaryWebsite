@@ -369,6 +369,42 @@ body:not(.user-is-tabbing) a:focus {
 /* ----- Navigation ----- */
 /* --------------------------------------- */
 
+.header {
+    background-color: #fff;
+    z-index: 1000;
+  }
+  
+  .nav {
+    position: sticky;
+    top: 0; /* Sticks the nav bar to the top */
+    background-color: #fff;
+    padding: 10px 0;
+    z-index: 1000; /* Ensures the nav stays on top of other content */
+    box-shadow: 0 4px 2px -2px gray; /* Optional shadow effect for visibility */
+  }
+  
+  .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav__items {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .nav__item {
+    margin-right: 20px;
+  }
+  
+  .nav__link {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+  }
 .nav {
     display: flex;
     justify-content: flex-end;
