@@ -36,6 +36,61 @@
 <body>
 
   <!-- ***** Header ***** -->
+  <style>
+    .header {
+      position: fixed; /* Fixes the header at the top */
+      top: 0; /* Positions it at the top */
+      left: 0; /* Aligns it to the left edge */
+      width: 100%; /* Makes the header span the full width of the screen */
+      background-color: #fff; /* Set a background color (optional, to make it visible) */
+      z-index: 1000; /* Ensures the header stays on top of other elements */
+      padding: 10px 0;
+      box-shadow: 0 4px 2px -2px gray; /* Optional shadow effect for better visibility */
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav__items {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    .nav__item {
+      margin-right: 20px;
+    }
+
+    .nav__link {
+      text-decoration: none;
+      color: #000;
+      font-weight: bold;
+    }
+
+    body {
+      margin: 0; /* Remove default margin from the body */
+      padding-top: 60px; /* Adjust padding so that content doesn’t hide under the header */
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ***** Header ***** -->
+  <header class="header" role="banner" id="top">
+    <div class="row">
+      <nav class="nav" role="navigation">
+        <ul class="nav__items">
+          <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
+          <li class="nav__item"><a href="#clients" class="nav__link">Clients</a></li>
+          <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+          <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
 
   <header class="header" role="banner" id="top">
     <div class="row">
@@ -63,6 +118,7 @@
         <a href="#contact" class="btn btn--pink">Get in touch</a>
       </div>
     </div>
+    
   </header>
 
   <main role="main">
