@@ -53,34 +53,7 @@
 
     --border-light: 1px solid rgb(36, 35, 35);
 }
-.content-section {
-    padding: 60px 0;
-    background-color: #f9f9f9;
-  }
-  
-  .content-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 auto;
-    max-width: 1200px;
-    padding: 0 20px;
-  }
-  
-  .content-text {
-    flex: 1;
-    padding-right: 20px;
-  }
-  
-  .content-image {
-    flex: 1;
-  }
-  
-  .content-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-  }
+
 
 html {
     font-size: 62.5%; /* (16/10)*100 = 62.5% => 1rem = 10px */
