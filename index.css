@@ -443,6 +443,8 @@ body:not(.user-is-tabbing) a:focus {
     background-position: center;
     background-attachment: fixed;
     font-size: var(--font-size-normal);
+    position: fixed;
+    top: 0;
 }
 
 .header__text {
