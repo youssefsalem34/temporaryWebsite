@@ -367,6 +367,10 @@ body:not(.user-is-tabbing) a:focus {
 /* ----- Navigation ----- */
 /* --------------------------------------- */
 
+:root {
+    --gutter-normal: 1rem; /* Example value */
+    --gutter-medium: 0.5rem; /* Example value */
+}
 .nav {
     display: flex;
     justify-content: flex-end;
