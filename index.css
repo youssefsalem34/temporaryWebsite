@@ -494,14 +494,7 @@ body:not(.user-is-tabbing) a:focus {
     max-width: var(--container-medium-width);
     font-family: 'Jost', sans-serif;
     font-size: var(--font-size-medium);
-    .banner
-{
-    position: relative;
-    width: 100%;
-    height:100vh;
-    background: url(bg.jpg);
-    background-size: cover;
-}
+    
 }
 
 @media(max-width: 500px) {
