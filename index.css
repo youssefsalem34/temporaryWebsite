@@ -373,6 +373,7 @@ body:not(.user-is-tabbing) a:focus {
     padding: var(--gutter-normal) 0;
     position: fixed;
     top: 0;
+    z-index: 1000;
 }
 
 .nav__items {
@@ -432,74 +433,7 @@ body:not(.user-is-tabbing) a:focus {
     height: 2px;
     background: var(--pink);
 }
-.nav {
-    display: flex;
-    justify-content: flex-end;
-    padding: var(--gutter-normal) 0;
-    position: fixed;
-    top: 0;
-    width: 100%; /* Ensure it spans the full width */
-    background-color: rgba(255, 255, 255, 0.8); /* Optional: Add background for readability */
-    z-index: 1000; /* Ensure it's above other content */
-}
 
-.nav__items {
-    display: flex;
-    list-style: none;
-}
-
-.nav__item:not(:last-child) {
-    margin-right: var(--gutter-medium);
-}
-
-@media(max-width: 500px) {
-    .nav {
-        justify-content: center;
-    }
-}
-
-@media(max-width: 400px) {
-    .nav__item:not(:last-child) {
-        margin-right: var(--gutter-normal);
-    }
-}
-
-@media(max-width: 300px) {
-    .nav {
-        font-size: var(--font-size-small);
-    }
-}
-
-.nav__link {
-    position: relative;
-    display: inline-block;
-    padding: 1rem 0;
-    text-decoration: none;
-    color: inherit;
-    transition: all .2s;
-}
-
-.nav__link::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 100%;
-    display: inline-block;
-    height: 1rem;
-    background: var(--white);
-    transition: all 0.25s cubic-bezier(1, 0.68, 0.16, 0.9);
-}
-
-.nav__link:hover {
-    color: var(--pink);
-}
-
-.nav__link:hover::after {
-    right: 0;
-    height: 2px;
-    background: var(--pink);
-}
 
 /* --------------------------------------- */
 /* ----- Header ----- */
@@ -515,6 +449,8 @@ body:not(.user-is-tabbing) a:focus {
     font-size: var(--font-size-normal);
     /* position: fixed;
     top: 0; */
+    padding-top: var(--gutter-normal);
+    margin-top: calc(var(--gutter-normal) + 1rem);
 }
 
 .header__text {
