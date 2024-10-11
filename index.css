@@ -372,8 +372,9 @@ body:not(.user-is-tabbing) a:focus {
 .header {
     background-color: #fff;
     z-index: 1000;
-    /* position: fixed;
-   */
+    position: sticky;
+    top: 0;
+  
   }
   
   .nav {
