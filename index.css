@@ -369,7 +369,7 @@ body:not(.user-is-tabbing) a:focus {
 
 .nav {
     display: flex;
-    justify-content: flex-start; /* Align items to the left */
+    justify-content: flex-end; /* Align items to the left */
     align-items: center; /* Center items vertically */
     padding: var(--gutter-normal) 0;
     position: fixed;
@@ -380,7 +380,7 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 .nav__logo {
-    width: 50px; /* Adjust the width as per your preference */
+    width: 100px; /* Adjust the width as per your preference */
     height: auto; /* Keeps the aspect ratio */
     margin-right: 1rem; /* Adds space between the logo and navigation items */
 }
