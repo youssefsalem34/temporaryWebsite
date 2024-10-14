@@ -370,7 +370,7 @@ body:not(.user-is-tabbing) a:focus {
 .nav {
     display: flex;
     justify-content: flex-end;
-    align-items: center;
+    /* align-items: center; */
     padding: var(--gutter-normal) 0;
     position: fixed;
     top: 0;
