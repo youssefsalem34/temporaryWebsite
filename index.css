@@ -383,11 +383,7 @@ body:not(.user-is-tabbing) a:focus {
     z-index: 10000;
 }
 
-.nav__logo {
-    width: 150px; /* Adjust the width as per your preference */
-    height: auto; /* Keeps the aspect ratio */
-    margin-right: 0.1rem; /* Adds space between the logo and navigation items */
-}
+
 
 .nav__items {
     display: flex;
@@ -400,32 +396,20 @@ body:not(.user-is-tabbing) a:focus {
     margin-right: var(--gutter-medium);
 }
 
-/* @media(max-width: 500px) {
+ @media(max-width: 500px) {
     .nav {
         justify-content: center;
     }
-} */
- /* Mobile responsiveness */
-@media(max-width: 500px) {
-    .nav {
-        justify-content: space-between; /* Center nav on mobile with space for logo */
-        padding: var(--gutter-medium) 1rem; /* More padding for smaller screens */
-    }
-}
+} 
+ 
 
-/* @media(max-width: 400px) {
+
+ @media(max-width: 400px) {
     .nav__item:not(:last-child) {
         margin-right: var(--gutter-normal);
     }
-} */
-@media(max-width: 400px) {
-    .nav__item:not(:last-child) {
-        margin-right: var(--gutter-normal); /* Adjust space between items on smaller screens */
-    }
-    .nav__logo {
-        width: 40px; /* Slightly reduce logo size for small screens */
-    }
-}
+} 
+
 
 @media(max-width: 300px) {
     .nav {
