@@ -380,7 +380,7 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 .nav__logo {
-    width: 1300px; /* Adjust the width as per your preference */
+    width: 130px; /* Adjust the width as per your preference */
     height: auto; /* Keeps the aspect ratio */
     margin-right: 1rem; /* Adds space between the logo and navigation items */
 }
@@ -655,4 +655,55 @@ body:not(.user-is-tabbing) a:focus {
     .footer {
         padding: var(--gutter-medium) 0;
     } 
+}
+
+/* --------------------------------------- */
+/* ----- Customer Reviews ----- */
+/* --------------------------------------- */
+
+.customer-reviews {
+    padding: var(--gutter-normal);
+    background-color: var(--white-1);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: var(--gutter-normal) 0;
+}
+
+.customer-reviews__title {
+    font-size: var(--font-size-large);
+    font-weight: bold;
+    margin-bottom: var(--gutter-small);
+    color: var(--black);
+}
+
+.customer-reviews__list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.customer-reviews__item {
+    margin-bottom: var(--gutter-small-1);
+    border-bottom: 1px solid var(--border-light);
+    padding-bottom: var(--gutter-small);
+}
+
+.customer-reviews__author {
+    font-weight: bold;
+    color: var(--pink);
+}
+
+.customer-reviews__text {
+    font-size: var(--font-size-normal);
+    color: var(--black);
+}
+
+/* Responsive styles */
+@media(max-width: 600px) {
+    .customer-reviews {
+        padding: var(--gutter-small);
+    }
+
+    .customer-reviews__title {
+        font-size: var(--font-size-medium);
+    }
 }

@@ -41,3 +41,35 @@ window.addEventListener("scroll", () => {
     alterStyles(isBackToTopRendered);
   }
 });
+
+const reviews = [
+  {
+    author: "John Doe",
+    text: "This product changed my life! Highly recommend.",
+  },
+  {
+    author: "Jane Smith",
+    text: "Fantastic quality and great customer service.",
+  },
+  {
+    author: "Michael Johnson",
+    text: "I wasn't satisfied with my purchase, but the support team was very helpful.",
+  },
+];
+
+// Function to render customer reviews
+const renderReviews = () => {
+  const reviewsList = document.getElementById("reviewsList");
+  reviews.forEach((review) => {
+    const listItem = document.createElement("li");
+    listItem.classList.add("customer-reviews__item");
+    listItem.innerHTML = `
+      <span class="customer-reviews__author">${review.author}</span>
+      <p class="customer-reviews__text">${review.text}</p>
+    `;
+    reviewsList.appendChild(listItem);
+  });
+};
+
+// Call the renderReviews function to populate the reviews
+renderReviews();
