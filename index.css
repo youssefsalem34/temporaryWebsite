@@ -378,8 +378,8 @@ body:not(.user-is-tabbing) a:focus {
     position: fixed;
     top: 0;
     /* background-color: rgb(255, 255, 255); */
-    width: 100%;
-    z-index: 1000;
+    /* width: 100%;
+    z-index: 1000; */
 }
 
 .nav__items {
