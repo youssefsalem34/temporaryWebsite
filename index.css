@@ -375,12 +375,12 @@ body:not(.user-is-tabbing) a:focus {
     position: fixed;
     top: 0;
     background-color: rgb(146, 146, 146); /* Optional: Add a background color for better visibility */
-    width: 100%; /* Ensure navbar spans full width */
+    width: 50%; /* Ensure navbar spans full width */
     z-index: 10;
 }
 
 .nav__logo {
-    width: 100px; /* Adjust the width as per your preference */
+    width: 130px; /* Adjust the width as per your preference */
     height: auto; /* Keeps the aspect ratio */
     margin-right: 1rem; /* Adds space between the logo and navigation items */
 }
