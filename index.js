@@ -2,46 +2,39 @@
   Have focus outline only for keyboard users 
  ---------------------------------------- */
 
-const handleFirstTab = (e) => {
-  if(e.key === 'Tab') {
-    document.body.classList.add('user-is-tabbing')
+ const handleFirstTab = (e) => {
+  if (e.key === 'Tab') {
+    document.body.classList.add('user-is-tabbing');
 
-    window.removeEventListener('keydown', handleFirstTab)
-    window.addEventListener('mousedown', handleMouseDownOnce)
+    window.removeEventListener('keydown', handleFirstTab);
+    window.addEventListener('mousedown', handleMouseDownOnce);
   }
-
-}
+};
 
 const handleMouseDownOnce = () => {
-  document.body.classList.remove('user-is-tabbing')
+  document.body.classList.remove('user-is-tabbing');
 
-  window.removeEventListener('mousedown', handleMouseDownOnce)
-  window.addEventListener('keydown', handleFirstTab)
-}
+  window.removeEventListener('mousedown', handleMouseDownOnce);
+  window.addEventListener('keydown', handleFirstTab);
+};
 
-window.addEventListener('keydown', handleFirstTab)
+window.addEventListener('keydown', handleFirstTab);
 
 const backToTopButton = document.querySelector(".back-to-top");
 let isBackToTopRendered = false;
 
-let alterStyles = (isBackToTopRendered) => {
-  backToTopButton.style.visibility = isBackToTopRendered ? "visible" : "hidden";
-  backToTopButton.style.opacity = isBackToTopRendered ? 1 : 0;
-  backToTopButton.style.transform = isBackToTopRendered
-    ? "scale(1)"
-    : "scale(0)";
+const alterStyles = (isVisible) => {
+  backToTopButton.style.visibility = isVisible ? "visible" : "hidden";
+  backToTopButton.style.opacity = isVisible ? 1 : 0;
+  backToTopButton.style.transform = isVisible ? "scale(1)" : "scale(0)";
 };
 
 window.addEventListener("scroll", () => {
-  if (window.scrollY > 700) {
-    isBackToTopRendered = true;
-    alterStyles(isBackToTopRendered);
-  } else {
-    isBackToTopRendered = false;
-    alterStyles(isBackToTopRendered);
-  }
+  isBackToTopRendered = window.scrollY > 700;
+  alterStyles(isBackToTopRendered);
 });
 
+// Review data
 const reviews = [
   {
     author: "John Doe",
@@ -60,6 +53,7 @@ const reviews = [
 // Function to render customer reviews
 const renderReviews = () => {
   const reviewsList = document.getElementById("reviewsList");
+  reviewsList.innerHTML = ""; // Clear existing reviews
   reviews.forEach((review) => {
     const listItem = document.createElement("li");
     listItem.classList.add("customer-reviews__item");
@@ -71,5 +65,26 @@ const renderReviews = () => {
   });
 };
 
-// Call the renderReviews function to populate the reviews
-renderReviews();
+// Handle form submission
+const reviewForm = document.getElementById("reviewForm");
+reviewForm.addEventListener("submit", (e) => {
+  e.preventDefault(); // Prevent default form submission
+  const reviewText = document.getElementById("reviewText").value;
+
+  // Add new review to the reviews array
+  reviews.push({
+    author: "New Reviewer", // Placeholder for the author
+    text: reviewText,
+  });
+
+  // Clear the textarea
+  document.getElementById("reviewText").value = "";
+
+  // Re-render the reviews
+  renderReviews();
+});
+
+// Call the renderReviews function to populate the reviews once DOM is loaded
+document.addEventListener("DOMContentLoaded", () => {
+  renderReviews();
+});
