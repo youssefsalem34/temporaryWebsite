@@ -375,6 +375,11 @@ body:not(.user-is-tabbing) a:focus {
     position: fixed;
     top: 0;
 }
+.nav__logo {
+    width: 150px; /* Adjust the width as per your preference */
+    height: auto; /* Keeps the aspect ratio */
+    margin-right: 0.1rem; /* Adds space between the logo and navigation items */
+}
 
 .nav__items {
     display: flex;
